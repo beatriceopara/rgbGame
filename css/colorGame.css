@@ -1,0 +1,21 @@
+body {
+  background-color: #232323;
+}
+
+#container {
+  max-width: 600px;
+  margin: 0 auto;
+  /* this makes it the same size left and right. top/bottom - centring the grid */
+}
+
+.square {
+  width: 30%;
+  background: purple;
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+}
+
+h1 {
+  color: white;
+}

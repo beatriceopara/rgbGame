@@ -12,26 +12,44 @@ var squares = document.querySelectorAll(".square");
 // this will loop through each square
 // e.g. 0 is the first div and 1 is the second square div
 
-var pickedColor = colors[3];
+var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
+var messageDisplay = document.querySelector("#message");
 
 colorDisplay.textContent = pickedColor;
 
-for(var i = 0; i < squares.length; i++){
+for (var i = 0; i < squares.length; i++) {
   //add inital colors to squares
   squares[i].style.backgroundColor = colors[i];
 
   //add click listeners to squares
-  squares[i].addEventListener("click", function(){
+  squares[i].addEventListener("click", function() {
     //grab color of clicked squares
     var clickedColor = (this.style.backgroundColor);
     //compare color to pickedColor
-    if(clickedColor === pickedColor){
-      alert("Correct!");
+    if (clickedColor === pickedColor) {
+      //this text will pop up if the correct square is chosen
+      messageDisplay.textContent = "Correct!"
+      changeColors(clickedColor);
     }
     //fades out square when player picks the wrong square
     else {
       this.style.backgroundColor = "#232323";
+      //this text will pop up if the incorrect square is chosen
+      messageDisplay.textContent = "Try Again"
     }
   });
+}
+
+function changeColors(color) {
+  //loop through all squares
+  for (var i = 0; i < squares.length; i++) {
+    //change each color to match give color
+    squares[i].style.backgroundColor = color;
+  }
+}
+
+function pickColor(){
+  var random = Math.floor(Math.random() * colors.length);
+  return colors[random];
 }

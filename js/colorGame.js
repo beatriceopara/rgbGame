@@ -23,6 +23,15 @@ for(var i = 0; i < squares.length; i++){
 
   //add click listeners to squares
   squares[i].addEventListener("click", function(){
-    alert("clicked a square");
+    //grab color of clicked squares
+    var clickedColor = (this.style.backgroundColor);
+    //compare color to pickedColor
+    if(clickedColor === pickedColor){
+      alert("Correct!");
+    }
+    //fades out square when player picks the wrong square
+    else {
+      this.style.backgroundColor = "#232323";
+    }
   });
 }

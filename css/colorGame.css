@@ -1,7 +1,7 @@
 body {
-  background-color: #232323;
+  background-color: papayawhip;
   margin: 0;
-  font-family: "Arial";
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 #container {
@@ -26,8 +26,9 @@ body {
 h1 {
   color: white;
   text-align: center;
-  line-height: 1.1;
-  background-color: steelblue;
+  line-height: 1.3;
+  letter-spacing: 1.5px;
+  background-color: #E56088;
   margin: 0;
   font-weight: normal;
   text-transform: uppercase;
@@ -50,7 +51,7 @@ h1 {
 }
 .selected {
   color: white;
-  background: steelblue;
+  background: #E56088;
 }
 
 button {
@@ -59,7 +60,7 @@ button {
   text-transform: uppercase;
   height: 100%;
   font-weight: 700;
-  color: steelblue;
+  color: #E56088;
   letter-spacing: 1px;
   font-size: inherit;
   transition: all 0.4s;
@@ -70,5 +71,5 @@ button {
 
 button:hover {
   color: white;
-  background: steelblue;
+  background: #E56088;
 }
